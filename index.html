@@ -1,73 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMI Calculator</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <main>
-    <div id="calculator__container">
-      <div class="title__and__desc">
-        <h1>BMI Calculator</h1>
-        <p>Calculate your Body Mass Index (BMI) with precision <br class="description__br"> and gain insights into your health</p>
-      </div>
-      <form id="bmi__form">
-        <div class="form__field__box">
-          <label for="age">Age</label>
-          <input class="input__control" type="number" id="age" placeholder="Input your Age" required>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  </head>
+  <body>
+    <main>
+      <div id="calculator__container">
+        <div class="title__and__desc">
+          <h1>BMI Calculator</h1>
+          <p>
+            Calculate your Body Mass Index (BMI) with precision
+            <br class="description__br" />
+            and gain insights into your health
+          </p>
         </div>
-        <div class="form__field__box">
-          <label for="gender">Gender</label>
-          <div class="radio__input">
-            <div class="radio__box">
-              <input type="radio" id="male" name="gender" value="Male" required>
-              <label for="male">Male</label>
+        <form id="bmi__form">
+          <div class="form__field__box">
+            <label for="age">Age</label>
+            <input
+              class="input__control"
+              type="number"
+              id="age"
+              placeholder="Input your Age"
+              required
+            />
+          </div>
+          <div class="form__field__box">
+            <label for="gender">Gender</label>
+            <div class="radio__input">
+              <div class="radio__box">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="Male"
+                  required
+                />
+                <label for="male">Male</label>
+              </div>
+              <div class="radio__box">
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="Female"
+                  required
+                />
+                <label for="female">Female</label>
+              </div>
             </div>
-            <div class="radio__box">
-              <input type="radio" id="female" name="gender" value="Female" required>
-              <label for="female">Female</label>
+          </div>
+          <div class="form__field__box">
+            <label for="height">Height</label>
+            <div class="input__with__guide">
+              <input
+                class="input__control"
+                type="number"
+                id="height"
+                placeholder="Input your Height"
+                required
+              />
+              <span class="guide">cm</span>
             </div>
           </div>
-        </div>
-        <div class="form__field__box">
-          <label for="height">Height</label>
-          <div class="input__with__guide">
-            <input class="input__control" type="number" id="height" placeholder="Input your Height" required>
-            <span class="guide">cm</span>
+          <div class="form__field__box">
+            <label for="weight">Weight</label>
+            <div class="input__with__guide">
+              <input
+                class="input__control"
+                type="number"
+                id="weight"
+                placeholder="Input your Weight"
+                required
+              />
+              <span class="guide">kg</span>
+            </div>
           </div>
-        </div>
-        <div class="form__field__box">
-          <label for="weight">Weight</label>
-          <div class="input__with__guide">
-            <input class="input__control" type="number" id="weight" placeholder="Input your Weight" required>
-            <span class="guide">kg</span>
-          </div>
-        </div>
-        
-        <button id="calculate__button" type="submit">
-          Calculate
-        </button>
-      </form>
-    </div>
-    <div id="result__container">
-      <img src="assets/icons/bmi.png" alt="BMI Icons" width="120">
-      
-      <div class="text-center">
-        <div id="bmi__result">
-          
-        </div>
-        <p id="conclusion">Please insert your data first</p>
-      </div>
-    </div>
-  </main>
 
-  <script src="script.js"></script>
-</body>
+          <button id="calculate__button" type="submit">Calculate</button>
+        </form>
+      </div>
+      <div id="result__container">
+        <img src="assets/icons/bmi.png" alt="BMI Icons" width="120" />
+
+        <div class="text-center">
+          <div id="bmi__result"></div>
+          <p id="conclusion">Please insert your data first</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

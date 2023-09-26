@@ -82,7 +82,7 @@ function submit(){
   conclusion.textContent = getConclusion(bmiResult);
 }
 
-bmiForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+bmiForm.addEventListener('submit', event => {
+  event.preventDefault();
   submit();
 })

@@ -1,0 +1,215 @@
+/* Reset */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Utility */
+.text-center{
+  text-align: center;
+}
+
+/* Style */
+body{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3F597E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%233F597E' width='11' height='11'/%3E%3Crect fill='%23425b80' x='10' width='11' height='11'/%3E%3Crect fill='%23455e82' y='10' width='11' height='11'/%3E%3Crect fill='%23486083' x='20' width='11' height='11'/%3E%3Crect fill='%234b6285' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%234e6487' y='20' width='11' height='11'/%3E%3Crect fill='%23516789' x='30' width='11' height='11'/%3E%3Crect fill='%2354698b' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23576b8d' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%235a6e8e' y='30' width='11' height='11'/%3E%3Crect fill='%235d7090' x='40' width='11' height='11'/%3E%3Crect fill='%23607392' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23637594' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23667796' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23687a98' y='40' width='11' height='11'/%3E%3Crect fill='%236b7c99' x='50' width='11' height='11'/%3E%3Crect fill='%236e7f9b' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%2371819d' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%2374839f' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%237786a1' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%237a88a3' y='50' width='11' height='11'/%3E%3Crect fill='%237d8ba5' x='60' width='11' height='11'/%3E%3Crect fill='%23808da7' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%238390a8' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%238692aa' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%238895ac' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%238b97ae' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%238e9ab0' x='70' width='11' height='11'/%3E%3Crect fill='%23919cb2' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23949fb4' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%2397a1b6' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%239aa4b8' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%239da6b9' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23a0a9bb' x='80' width='11' height='11'/%3E%3Crect fill='%23a3acbd' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23a6aebf' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23a9b1c1' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23acb3c3' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23afb6c5' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23b2b9c7' x='90' width='11' height='11'/%3E%3Crect fill='%23b5bbc9' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23b8becb' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23bbc0cd' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23bec3cf' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23c1c6d1' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23c4c8d3' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23c7cbd4' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23caced6' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23cdd0d8' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23d0d3da' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23d3d6dc' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23d6d8de' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23d9dbe0' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23dcdee2' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23dfe0e4' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23e2e3e6' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23e5e6e8' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23e8e9ea' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23ebebec' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23EEEEEE' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+main{
+  max-width: 850px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#calculator__container{
+  background: #FEFEFE;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  padding: 32px 24px;
+}
+
+#result__container{
+  background: #3f597e;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 24px;
+  padding: 32px 24px;
+}
+
+.title__and__desc{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  text-align: center;
+  user-select: none;
+}
+
+h1{
+  color: #34364a;
+  font-weight: 800;
+}
+
+p{
+  color: #787a8a;
+  font-size: 15px;
+  letter-spacing: 0.6px;
+}
+
+form#bmi__form{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.form__field__box input.input__control{
+  width: 100%;
+  /* display: block; */
+  padding: 12px 6px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1.5px solid #7c8b9d80;
+}
+
+input, label{
+  color: #3c3e53;
+}
+
+.form__field__box > label{
+  font-weight: 600;
+  user-select: none;
+}
+
+/* Remove Arrow on Input number type */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove autofill bg color */
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input::placeholder{
+  font-family: 'Poppins', sans-serif;
+  color: rgba(128, 128, 128, 0.685);
+}
+
+/* Weight and Height Guide */
+.input__with__guide{
+  position: relative;
+}
+
+.guide{
+  position: absolute;
+  top: 50%; right: 8px;
+  transform: translateY(-50%);
+  user-select: none;
+  color: #3c3e53;
+}
+
+.radio__input{
+  display: flex;
+  column-gap: 20px;
+  margin-top: 10px;
+}
+
+.radio__box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 6px;
+  margin-left: 2px;
+}
+
+.radio__box > * {
+  cursor: pointer;
+}
+
+input[type="radio"]{
+  transform: scale(1.3);
+  margin-bottom: -3px;
+}
+
+button#calculate__button{
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: white;
+  background: #3f597e;
+  padding: 12px 6px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button#calculate__button:hover{
+  background: #354c6b;
+}
+
+#bmi__result{
+  font-size: 26px;
+  font-weight: 600;
+  color: white;
+}
+
+#conclusion{
+  margin-top: 8px;
+  color: white;
+  font-weight: 600;
+}
+
+.description__br{
+  display: none;
+}
+
+/* Responsive */
+@media only screen and (min-width: 880px) {
+  body{
+    height: 100vh;
+  }
+  main {
+    width: 100%;
+    flex-direction: row;
+    align-items: unset;
+  }
+
+  #result__container{
+    max-width: 390px;
+  }
+
+  .description__br{
+    display: block;
+  }
+}

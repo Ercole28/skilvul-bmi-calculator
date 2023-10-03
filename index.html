@@ -27,14 +27,30 @@
         </div>
         <form id="bmi__form">
           <div class="form__field__box">
-            <label for="age">Age</label>
-            <input
+            <label for="height">Height</label>
+            <div class="input__with__guide">
+              <input
               class="input__control"
               type="number"
-              id="age"
-              placeholder="Input your Age"
+              id="height"
+              placeholder="Input your Height"
               required
-            />
+              />
+              <span class="guide">cm</span>
+            </div>
+          </div>
+          <div class="form__field__box">
+            <label for="weight">Weight</label>
+            <div class="input__with__guide">
+              <input
+              class="input__control"
+              type="number"
+              id="weight"
+              placeholder="Input your Weight"
+              required
+              />
+              <span class="guide">kg</span>
+            </div>
           </div>
           <div class="form__field__box">
             <label for="gender">Gender</label>
@@ -61,33 +77,7 @@
               </div>
             </div>
           </div>
-          <div class="form__field__box">
-            <label for="height">Height</label>
-            <div class="input__with__guide">
-              <input
-                class="input__control"
-                type="number"
-                id="height"
-                placeholder="Input your Height"
-                required
-              />
-              <span class="guide">cm</span>
-            </div>
-          </div>
-          <div class="form__field__box">
-            <label for="weight">Weight</label>
-            <div class="input__with__guide">
-              <input
-                class="input__control"
-                type="number"
-                id="weight"
-                placeholder="Input your Weight"
-                required
-              />
-              <span class="guide">kg</span>
-            </div>
-          </div>
-
+          
           <button id="calculate__button" type="submit">Calculate</button>
         </form>
       </div>

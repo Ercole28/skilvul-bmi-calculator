@@ -7,39 +7,33 @@ function getGender(){
   } else if (femaleRadio.checked) {
     return false;
   } else {
-    return ''; // If both radio !checked
+    return '';
   }
 }
 
 function getHeight(){
   const heightField = document.getElementById('height').value;
 
-  return heightField / 100; // Convert cm into m
+  return heightField / 100;
 }
 
 function handleGetFormData(){
-  let userAge = document.getElementById('age').value;
   let userGenderisMale = getGender();
   let userWeight = document.getElementById('weight').value;
   let userHeight = getHeight();
 
   return {
-    userAge,
     userGenderisMale,
     userWeight,
     userHeight
   }
 }
 
-function calculateBMI(weight, height, age, isMale){
+function calculateBMI(weight, height, isMale){
   const bmi = weight / (height * height);
   let bmiWithAgeAndGenderFactors = bmi;
-  
-  // Age factor
-  if(age < 20){
-    bmiWithAgeAndGenderFactors *= 1.0;
-  }
-  // Gender factor
+
+  // Faktor Jenis Kelamin
   if (!isMale) {
     bmiWithAgeAndGenderFactors *= 0.85;
   }
@@ -69,15 +63,13 @@ const conclusion = document.getElementById('conclusion');
 
 function submit(){
   const {
-    userAge,
-    userGenderisMale,
     userWeight,
-    userHeight
+    userHeight,
+    userGenderisMale
   } = handleGetFormData();
 
-  const bmiResult = calculateBMI(userWeight, userHeight, userAge, userGenderisMale);
+  const bmiResult = calculateBMI(userWeight, userHeight, userGenderisMale);
 
-  // Manipulate Text Content
   result.textContent = bmiResult;
   conclusion.textContent = getConclusion(bmiResult);
 }

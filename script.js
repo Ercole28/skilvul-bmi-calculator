@@ -42,19 +42,25 @@ function calculateBMI(weight, height, isMale){
 }
 
 function getConclusion(bmiResult){
-  let conclusion;
-
   if(bmiResult < 18.5) {
-    conclusion = 'Underweight';
+    return 'Underweight';
   } else if(bmiResult > 18.5 && bmiResult < 24.9) {
-    conclusion = 'Normal';
+    return  'Normal';
   } else if(bmiResult > 25 && bmiResult < 29.9) {
-    conclusion = 'Overweight';
+    return 'Overweight';
   } else {
-    conclusion = 'Obesity';
+    return 'Obesity';
   }
+}
 
-  return conclusion;
+function setConclusionColor(bmiResult){
+  if(bmiResult == 'Normal'){
+    return '#3bc8bc';
+  } else if(bmiResult == 'Overweight') {
+    return '#f4b600';
+  } else {
+    return '#F9415B';
+  }
 }
 
 const bmiForm = document.getElementById('bmi__form');
@@ -72,6 +78,7 @@ function submit(){
 
   result.textContent = bmiResult;
   conclusion.textContent = getConclusion(bmiResult);
+  conclusion.style.color = setConclusionColor(getConclusion(bmiResult));
 }
 
 bmiForm.addEventListener('submit', event => {

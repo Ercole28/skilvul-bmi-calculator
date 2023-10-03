@@ -185,14 +185,23 @@ button#calculate__button:hover{
 }
 
 #conclusion{
+  color: #34364A;
   margin-top: 8px;
-  color: white;
-  font-weight: 600;
+  font-weight: 800;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+}
+
+#result__container img{
+  width: 90px;
+  aspect-ratio: 1/1;
 }
 
 .description__br{
   display: none;
 }
+
 
 /* Responsive */
 @media only screen and (min-width: 880px) {
@@ -207,6 +216,10 @@ button#calculate__button:hover{
 
   #result__container{
     max-width: 390px;
+  }
+
+  #result__container img{
+    width: 120px;
   }
 
   .description__br{
